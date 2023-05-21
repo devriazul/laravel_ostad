@@ -6,5 +6,7 @@ use Illuminate\Http\Request;
 
 class DemoController extends Controller
 {
-    //
+    function DemoAction(){
+        return "This is test controller";
+    }
 }
