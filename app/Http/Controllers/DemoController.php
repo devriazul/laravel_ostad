@@ -11,8 +11,8 @@ class DemoController extends Controller
         return "This is test controller";
     }
     function DataAction(Request $request):string{
-        $name = $request-> name;
-        $age = $request-> age;
-        return "My Name Is $name and my age is $age.";
+        $name = $request-> input('name');
+        $age = $request-> input('age');
+        return "My Name Is ${name} and my age is ${age}.";
     }
 }
