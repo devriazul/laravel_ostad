@@ -22,3 +22,4 @@ Route::get('/hello', function () {
 });
 
 Route::get('/demo',[DemoController::class,'DemoAction']);
+Route::get('/{name}/{age}',[DemoController::class,'DataAction']);
