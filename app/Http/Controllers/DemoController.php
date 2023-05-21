@@ -10,9 +10,19 @@ class DemoController extends Controller
     function DemoAction(){
         return "This is test controller";
     }
-    function DataAction(Request $request):string{
+    function DataAction(Request $request):array{
+        $pin = $request->header('pin');
         $name = $request-> input('name');
         $age = $request-> input('age');
-        return "My Name Is ${name} and my age is ${age}.";
+        $city = $request->city;
+        $postcode = $request->postcode;
+
+        return array(
+            "pin" => $pin,
+            "name" => $name,
+            "age" => $age,
+            "city" => $city,
+            "postcode" => $postcode,
+        );
     }
 }

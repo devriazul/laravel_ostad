@@ -24,4 +24,4 @@ Route::get('/hello', function () {
 });
 
 Route::get('/demo',[DemoController::class,'DemoAction']);
-Route::get('/details',[DemoController::class,'DataAction']);
+Route::get('/details/{city}/{postcode}',[DemoController::class,'DataAction']);
