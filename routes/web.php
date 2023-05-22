@@ -17,9 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/hello', function () {
-    return "Hello World!";
-});
 
-Route::get('/demo',[DemoController::class,'DemoAction']);
-Route::get('/details/{city}/{postcode}',[DemoController::class,'DataAction']);
+Route::get('/json',[DemoController::class,'jsonResponse']);
+Route::post('/details',[DemoController::class,'DataAction']);
+Route::get('/file',[DemoController::class,'fileHandle']);
+Route::post('/submit',[DemoController::class,'Submit']);
